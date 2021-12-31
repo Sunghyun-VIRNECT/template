@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+Dockerfile
+Jenkinsfile
+.git
+.gitignore
+.hg
+.svn
+.dockerignore
+package-lock.json
+docker/*
+logs/*
+.vscode/*
+*.md
+releasenote.txt
+yarn.lock
