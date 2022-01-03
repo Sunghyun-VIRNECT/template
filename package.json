@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "cross-env VIRNECT_ENV=local NODE_ENV=local webpack-dev-server --hot --config build/webpack.dev.config.js",
     "build": "webpack --mode production",
+    "build": "webpack --mode production --progress --config build/webpack.prod.config.js",
     "lint": "eslint --fix --ext .js,.vue",
     "test:unit": "jest --watchAll"
   },
@@ -44,6 +45,7 @@
     "js-cookie": "^2.2.1",
     "lodash.clonedeep": "^4.5.0",
     "mini-css-extract-plugin": "^1.6.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
     "postcss": "^8.2.8",
     "postcss-loader": "^5.2.0",
     "sass": "^1.32.8",
