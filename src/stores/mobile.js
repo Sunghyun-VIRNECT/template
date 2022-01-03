@@ -1,22 +1,21 @@
 export default {
   namespaced: true,
-  state: () => ({
+  state: {
     isMobile: false,
-  }),
+  },
   getters: {
     isMobile(state) {
       return state.isMobile
     },
   },
   mutations: {
-    updateState(state, payload) {
-      state.isMobile = payload
+    IS_MOBILE(state, value) {
+      state.isMobile = value
     },
   },
   actions: {
-    async changeMobile({ commit, state }, payload) {
-      commit('updateState', payload)
-      console.log(state.isMobile)
+    async IS_MOBILE({ commit }, isMobile) {
+      commit('IS_MOBILE', isMobile)
     },
   },
 }
