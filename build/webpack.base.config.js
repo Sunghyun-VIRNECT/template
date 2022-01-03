@@ -2,6 +2,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const glob = require('glob')
 const { VueLoaderPlugin } = require('vue-loader')
 const { Base64 } = require('js-base64')
 
@@ -87,18 +88,10 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   test: /\.html$/,
-      //   use: [
-      //     {
-      //       loader: 'html-loader',
-      //       options: {
-      //         root: path.resolve(__dirname, 'src'),
-      //         attrs: ['img:src', 'link:href'],
-      //       },
-      //     },
-      //   ],
-      // },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
       // pdfkit
       {
         test: /VIRNECT_ROI\.svg$/,
@@ -137,6 +130,7 @@ module.exports = {
     }),
     new VueLoaderPlugin(),
     extractCSS,
+    // ...htmlWebpackPluginArray,
   ],
 
   devServer: {
