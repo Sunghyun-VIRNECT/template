@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, Chrome=1" />
+    <link rel="shortcut icon" href="https://virnect.com/favicon.ico" />
+    <style>
+      @charset "UTF-8";
+      :root {
+        --color-static-gray-10: #f1f3f5;
+        --color-static-gray-20: #e3e7eb;
+        --color-static-gray-30: #d2d7db;
+        --color-static-gray-40: #b6bcc2;
+        --color-static-gray-50: #9ba1a8;
+        --color-static-gray-60: #7c828a;
+        --color-static-gray-70: #515861;
+        --color-static-gray-80: #2e3238;
+        --color-static-font-gray-10: #f7f8f9;
+        --color-font-gray-90: #1e242b;
+        --color-font-gray-80: #5e666d;
+        --color-font-gray-70: #717c8d;
+        --color-font-blue-70: #0d66d0;
+        --color-gray-5: #fafbfc;
+        --color-gray-10: #f7f9fb;
+        --color-gray-20: #f2f4f6;
+        --color-gray-30: #e9ecf0;
+        --color-gray-40: #dee1e6;
+        --color-gray-50: #c7ccd1;
+        --color-gray-60: #b1b6bd;
+        --color-gray-70: #91979e;
+        --color-gray-80: #6d747d;
+        --color-gray-90: #414750;
+        --color-gray-100: #292c30;
+        --color-coolGray-40: #56657b;
+        --color-coolGray-50: #4d5d74;
+        --color-coolGray-60: #46556a;
+        --color-coolGray-70: #404e62;
+        --color-blue-40: #3b92f3;
+        --color-blue-50: #2680eb;
+        --color-blue-60: #1571e4;
+        --color-blue-70: #0d66d0;
+        --color-red-40: #ed545b;
+        --color-red-50: #e4434a;
+        --color-red-60: #d9333a;
+        --color-red-70: #cc2222;
+        --color-orange-40: #f2992d;
+        --color-orange-50: #e78c23;
+        --color-orange-60: #db811d;
+        --color-orange-70: #cd761c;
+        --color-green-40: #3cae89;
+        --color-green-50: #37a17e;
+        --color-green-60: #319373;
+        --color-green-70: #1e8664;
+        --color-font-gray-90: #1e242b;
+        --color-font-gray-80: #5e666d;
+        --color-font-gray-70: #717c8d;
+        --color-font-blue-70: #0d66d0;
+        --color-gray-5: #fafbfc;
+        --color-gray-10: #f7f9fb;
+        --color-gray-20: #f2f4f6;
+        --color-gray-30: #e9ecf0;
+        --color-gray-40: #dee1e6;
+        --color-gray-50: #c7ccd1;
+        --color-gray-60: #b1b6bd;
+        --color-gray-70: #91979e;
+        --color-gray-80: #6d747d;
+        --color-gray-90: #414750;
+        --color-gray-100: #292c30;
+        --color-coolGray-40: #56657b;
+        --color-coolGray-50: #4d5d74;
+        --color-coolGray-60: #46556a;
+        --color-coolGray-70: #404e62;
+        --color-blue-40: #3b92f3;
+        --color-blue-50: #2680eb;
+        --color-blue-60: #1571e4;
+        --color-blue-70: #0d66d0;
+        --color-red-40: #ed545b;
+        --color-red-50: #e4434a;
+        --color-red-60: #d9333a;
+        --color-red-70: #cc2222;
+        --color-orange-40: #f2992d;
+        --color-orange-50: #e78c23;
+        --color-orange-60: #db811d;
+        --color-orange-70: #cd761c;
+        --color-green-40: #3cae89;
+        --color-green-50: #37a17e;
+        --color-green-60: #319373;
+        --color-green-70: #1e8664;
+      }
+      @font-face {
+        font-weight: 400;
+        font-family: NotoSansKR;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Regular.eot);
+        src: local(※),
+          url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Regular.woff)
+            format("font-woff"),
+          url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Regular.woff2)
+            format("woff2");
+        font-display: auto;
+      }
+      @font-face {
+        font-weight: 500;
+        font-family: NotoSansKR;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Medium.eot);
+        src: local(※),
+          url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Medium.woff)
+            format("font-woff"),
+          url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Medium.woff2) format("woff2");
+        font-display: auto;
+      }
+      @font-face {
+        font-weight: 700;
+        font-family: NotoSansKR;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Bold.eot);
+        src: local(※),
+          url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Bold.woff)
+            format("font-woff"),
+          url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Bold.woff2) format("woff2");
+        font-display: auto;
+      }
+      @font-face {
+        font-weight: 400;
+        font-family: Roboto;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        src: url(../fonts/Roboto/roboto-Regular.eot);
+        src: local(※),
+          url(../fonts/Roboto/roboto-Regular.woff) format("font-woff"),
+          url(../fonts/Roboto/roboto-Regular.woff2) format("woff2");
+        font-display: auto;
+      }
+      @font-face {
+        font-weight: 500;
+        font-family: Roboto;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        src: url(../fonts/Roboto/roboto-Medium.eot);
+        src: local(※),
+          url(../fonts/Roboto/roboto-Medium.woff) format("font-woff"),
+          url(../fonts/Roboto/roboto-Medium.woff2) format("woff2");
+        font-display: auto;
+      }
+      @font-face {
+        font-weight: 700;
+        font-family: Roboto;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        src: url(../fonts/Roboto/roboto-Bold.eot);
+        src: local(※), url(../fonts/Roboto/roboto-Bold.woff) format("font-woff"),
+          url(../fonts/Roboto/roboto-Bold.woff2) format("woff2");
+        font-display: auto;
+      }
+      a,
+      abbr,
+      address,
+      applet,
+      article,
+      aside,
+      audio,
+      b,
+      blockquote,
+      body,
+      canvas,
+      caption,
+      center,
+      dd,
+      details,
+      div,
+      dl,
+      dt,
+      em,
+      embed,
+      fieldset,
+      figcaption,
+      figure,
+      footer,
+      form,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      header,
+      hgroup,
+      html,
+      i,
+      iframe,
+      img,
+      label,
+      legend,
+      li,
+      mark,
+      menu,
+      nav,
+      object,
+      ol,
+      p,
+      pre,
+      section,
+      small,
+      span,
+      strong,
+      sub,
+      summary,
+      table,
+      tbody,
+      td,
+      tfoot,
+      th,
+      thead,
+      time,
+      tr,
+      ul,
+      video {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        line-height: inherit;
+        word-break: keep-all;
+        border: 0;
+      }
+      strong {
+        font-weight: 700;
+      }
+      button,
+      input,
+      textarea {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      button:active,
+      button:focus,
+      button:hover,
+      input:active,
+      input:focus,
+      input:hover,
+      textarea:active,
+      textarea:focus,
+      textarea:hover {
+        background-color: transparent;
+        outline: 0;
+      }
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body,
+      html {
+        height: 100%;
+      }
+      html {
+        --font-family: NotoSansKR;
+        color: var(--color-gray-100);
+        font-family: var(--font-family);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        line-height: 1.6;
+      }
+      html:lang(en) {
+        --font-family: Roboto;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 24px;
+        line-height: 1.58;
+      }
+      a {
+        color: var(--color-gray-100);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      dl,
+      ol,
+      ul {
+        list-style: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      button,
+      input[type="submit"] {
+        font: inherit;
+        background: 0 0;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      caption {
+        display: none;
+        margin: 0;
+        padding: 0;
+      }
+      em,
+      i {
+        font-style: normal;
+      }
+      img {
+        max-width: 100%;
+      }
+      .blind-heading {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      .mobile-show {
+        display: none;
+      }
+      @media (max-width: 480px) {
+        .mobile-show {
+          display: block;
+        }
+      }
+      .mobile-hidden {
+        display: block;
+      }
+      @media (max-width: 480px) {
+        .mobile-hidden {
+          display: none;
+        }
+      }
+      .virnect-button {
+        display: inline-block;
+        color: var(--color-gray-90);
+        font-family: NotoSansKR;
+        background-color: var(--color-gray-40);
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      .virnect-button:hover {
+        color: var(--color-gray-100);
+        background-color: var(--color-gray-30);
+      }
+      .virnect-button:active {
+        color: var(--color-gray-100);
+        background-color: var(--color-gray-50);
+      }
+      .virnect-button.outline {
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-color: var(--color-gray-40);
+      }
+      .virnect-button.gray {
+        color: #f1f3f5;
+        background-color: var(--color-coolGray-60);
+        border-color: var(--color-coolGray-60);
+      }
+      .virnect-button.gray:hover {
+        background-color: var(--color-coolGray-50);
+        border-color: var(--color-coolGray-50);
+      }
+      .virnect-button.gray:active {
+        background-color: var(--color-coolGray-70);
+        border-color: var(--color-coolGray-70);
+      }
+      .virnect-button.gray.outline {
+        color: var(--color-gray-90);
+        background-color: transparent;
+      }
+      .virnect-button.primary {
+        color: #f1f3f5;
+        background-color: var(--color-blue-60);
+        border-color: var(--color-blue-60);
+      }
+      .virnect-button.primary:hover {
+        background-color: var(--color-blue-50);
+        border-color: var(--color-blue-50);
+      }
+      .virnect-button.primary:active {
+        background-color: var(--color-blue-70);
+        border-color: var(--color-blue-70);
+      }
+      .virnect-button.primary.outline {
+        color: var(--color-blue-60);
+        background-color: transparent;
+      }
+      .virnect-button.danger {
+        color: #f1f3f5;
+        background-color: var(--color-red-60);
+        border-color: var(--color-red-60);
+      }
+      .virnect-button.danger:hover {
+        background-color: var(--color-red-50);
+        border-color: var(--color-red-50);
+      }
+      .virnect-button.danger:active {
+        background-color: var(--color-red-70);
+        border-color: var(--color-red-70);
+      }
+      .virnect-button.danger.outline {
+        color: var(--color-red-60);
+        background-color: transparent;
+      }
+      .virnect-button.warning {
+        color: #f1f3f5;
+        background-color: var(--color-orange-60);
+        border-color: var(--color-orange-60);
+      }
+      .virnect-button.warning:hover {
+        background-color: var(--color-orange-50);
+        border-color: var(--color-orange-50);
+      }
+      .virnect-button.warning:active {
+        background-color: var(--color-orange-70);
+        border-color: var(--color-orange-70);
+      }
+      .virnect-button.warning.outline {
+        color: var(--color-orange-60);
+        background-color: transparent;
+      }
+      .virnect-button.success {
+        color: #f1f3f5;
+        background-color: var(--color-green-60);
+        border-color: var(--color-green-60);
+      }
+      .virnect-button.success:hover {
+        background-color: var(--color-green-50);
+        border-color: var(--color-green-50);
+      }
+      .virnect-button.success:active {
+        background-color: var(--color-green-70);
+        border-color: var(--color-green-70);
+      }
+      .virnect-button.success.outline {
+        color: var(--color-green-60);
+        background-color: transparent;
+      }
+      .virnect-button.small {
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+      }
+      .virnect-button.small.rounded {
+        border-radius: 14px;
+      }
+      .virnect-button.medium {
+        padding: 7px 16px 9px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+      }
+      .virnect-button.medium.rounded {
+        border-radius: 17px;
+      }
+      .virnect-button.large {
+        padding: 9px 24px 11px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+      .virnect-button.large.rounded {
+        border-radius: 20px;
+      }
+      .virnect-button.center {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .virnect-button.right {
+        display: block;
+        margin-left: auto;
+      }
+      .virnect-button.block {
+        width: 100%;
+      }
+      .virnect-button.block padding {
+        right: 0;
+        left: 0;
+      }
+      .virnect-button.selected {
+        color: var(--color-gray-10);
+        background-color: var(--color-gray-40);
+      }
+      .virnect-button.disabled {
+        color: var(--color-gray-60);
+        background-color: var(--color-gray-40);
+        cursor: none;
+      }
+      .virnect-error-page {
+        padding-top: 134px;
+        padding-bottom: 220px;
+        text-align: center;
+      }
+      .virnect-error-page h2 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 40px;
+      }
+      .virnect-error-page h2 + p {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-top: 8px;
+        opacity: 0.8;
+      }
+      .virnect-error-page .ratio-image {
+        max-width: 500px;
+        margin: auto;
+      }
+      .virnect-error-page .ratio-image:after {
+        display: block;
+        width: 100%;
+        padding-top: 60%;
+        content: "";
+      }
+      .virnect-error-page .ratio-image.browser {
+        background: url(https://image.virnect.com/images/errors/img-error-browser@2x.png)
+          no-repeat center;
+        background-size: 100%;
+      }
+      .virnect-error-page a {
+        max-width: 380px;
+        height: 50px;
+        margin-top: 44px;
+        background-color: #1571e4;
+      }
+      .virnect-error-page a.virnect-button.medium {
+        line-height: 34px;
+      }
+      .virnect-error-page dl {
+        width: 804px;
+        max-width: 100%;
+        margin: 40px auto 0;
+        padding: 30px 30px 34px;
+        line-height: 22px;
+        background: var(--color-gray-20);
+        border-radius: 3px;
+      }
+      .virnect-error-page dl dt {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 4px;
+      }
+      .virnect-error-page dl dd {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+      }
+      .virnect-error-page .links {
+        margin-top: 12px;
+      }
+      .virnect-error-page .links a {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+        position: relative;
+        padding: 0 12px;
+        color: var(--color-gray-90);
+      }
+      .virnect-error-page .links a:after {
+        position: absolute;
+        top: 17%;
+        right: 1px;
+        width: 1px;
+        height: 70%;
+        border-right: solid 1px var(--color-gray-80);
+        content: "";
+      }
+      .virnect-error-page .links a:last-child:after {
+        display: none;
+      }
+      @media (max-width: 1200px) {
+        .virnect-error-page {
+          padding-top: 88px;
+          padding-bottom: 76px;
+        }
+        .virnect-error-page h2 {
+          margin-top: 28px;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 32px;
+        }
+        .virnect-error-page h2 + p {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+        }
+        .virnect-error-page .ratio-image {
+          max-width: 312px;
+        }
+        .virnect-error-page .ratio-image:after {
+          display: block;
+          width: 100%;
+          padding-top: 89.7%;
+          content: "";
+        }
+        .virnect-error-page .ratio-image.browser {
+          background: url(https://image.virnect.com/images/errors/img-error-browser-m@2x.png)
+            no-repeat center;
+          background-size: 100%;
+        }
+        .virnect-error-page dl {
+          margin: 28px auto 0;
+        }
+        .virnect-error-page dl dd {
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 20px;
+        }
+        .virnect-error-page button {
+          margin-top: 36px;
+        }
+      }
+      @media (max-width: 480px) {
+        .virnect-error-page .ratio-image {
+          max-width: 100%;
+        }
+      }
+      .dark .virnect-error-page img {
+        opacity: 0.9;
+      }
+      .dark .virnect-error-page dl {
+        background: var(--color-gray-30);
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <title>VIRNECT Browser not supported</title>
+    <script>
+      cssVars({
+        onlyLegacy: true,
+        shadowDOM: true,
+        watch: true,
+        updateURLs: false,
+      });
+    </script>
+  </head>
+  <body>
+    <section class="virnect-error-page">
+      <div class="ratio-image browser"></div>
+
+      <h2>This browser is not supported</h2>
+      <p>
+        The selected service is not supported by this browser.<br />
+        Please download the recommended browser and try connecting again.
+      </p>
+
+      <a
+        type="primary"
+        class="virnect-button browser medium block primary"
+        target="_blank"
+        href="https://www.google.com/chrome/"
+        >Chrome download</a
+      >
+    </section>
+  </body>
+</html>
