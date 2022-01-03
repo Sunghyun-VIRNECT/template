@@ -21,8 +21,8 @@
     "@babel/plugin-transform-runtime": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
     "@virnect/components": "1.9.8",
-    "@virnect/eslint-config": "^0.0.0",
-    "@virnect/stylelint-config": "^1.0.6",
+    "@virnect/eslint-config": "0.0.0",
+    "@virnect/stylelint-config": "1.0.6",
     "@vue/compiler-sfc": "^3.0.11",
     "@vue/test-utils": "^2.0.0-rc.6",
     "autoprefixer": "^10.2.5",
@@ -51,7 +51,7 @@
     "webpack-dev-server": "^4.0.0-beta.0"
   },
   "dependencies": {
-    "@virnect/logger": "^1.0.2",
+    "@virnect/logger": "1.0.2",
     "axios": "^0.24.0",
     "express": "^4.17.2",
     "vue": "^3.0.7",

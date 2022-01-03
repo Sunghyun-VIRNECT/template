@@ -1534,7 +1534,7 @@
     "@virnect/ui-assets" "^1.9.8"
     v-tooltip "^2.1.3"
 
-"@virnect/eslint-config@^0.0.0":
+"@virnect/eslint-config@0.0.0":
   version "0.0.0"
   resolved "http://192.168.6.3:4873/@virnect%2feslint-config/-/eslint-config-0.0.0.tgz#5897c830631ff0cde54562b0e0a141da215d382c"
   integrity sha512-utN/TXQNOEKNDMcdBTFdoYxSBag5fl/o7xHGqI5kx/176iJYumfOET+kI0BM4MrddS7wESBU9PfWLOmBf5NeXg==
@@ -1548,7 +1548,7 @@
     eslint-plugin-vue "^6.0.1"
     prettier "^2.2.1"
 
-"@virnect/logger@^1.0.2":
+"@virnect/logger@1.0.2":
   version "1.0.2"
   resolved "http://192.168.6.3:4873/@virnect%2flogger/-/logger-1.0.2.tgz#7b03643d18adb0f74b448e2833cb48f29a4b3145"
   integrity sha512-kk7kP3BMjLxw3JdR7CEutQ3EAeEcB3r07JsUBmcYswB6lmY6LvTAEGzDIL8LjWdRoOP25YMy6/F1G1Um4G2e2g==
@@ -1557,7 +1557,7 @@
     dotenv "^8.1.0"
     log4js "^6.1.0"
 
-"@virnect/stylelint-config@^1.0.6":
+"@virnect/stylelint-config@1.0.6":
   version "1.0.6"
   resolved "http://192.168.6.3:4873/@virnect%2fstylelint-config/-/stylelint-config-1.0.6.tgz#4127d380ce7ef03f8583d97813af52cd93ee967e"
   integrity sha512-EOmBF8enOp6HbJ9LS45XDE9myRkwsOlw+FVMpHs3FChn5OPaQmMCCCRm9DyeXH+pP68vrf5CN7R1HjEwKTb6mA==
