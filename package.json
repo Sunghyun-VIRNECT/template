@@ -8,8 +8,7 @@
     "last 2 versions"
   ],
   "scripts": {
-    "dev": "cross-env VIRNECT_ENV=local NODE_ENV=local webpack-dev-server --hot --config build/webpack.dev.config.js",
-    "build": "webpack --mode production",
+    "dev": "cross-env VIRNECT_ENV=local NODE_ENV=local CONFIG_SERVER=http://192.168.6.3:6383 webpack-dev-server --hot --config build/webpack.dev.config.js",
     "build": "webpack --mode production --progress --config build/webpack.prod.config.js",
     "lint": "eslint --fix --ext .js,.vue",
     "test:unit": "jest --watchAll"
