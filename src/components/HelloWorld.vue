@@ -3,6 +3,7 @@
     {{ msg }}
     {{ $t('error.404') }}
     {{ $i18n.locale }}
+    {{ isMobile }}
   </h2>
 </template>
 
@@ -16,6 +17,9 @@ export default {
     const msg = computed(() => {
       return store.state.message.msg
     })
+    const isMobile = computed(() => {
+      return store.state.mobile.isMobile
+    })
     console.log(proxy.$store)
     console.log(ctx)
     const changeMessage = () => {
@@ -23,6 +27,7 @@ export default {
     }
     return {
       msg,
+      isMobile,
       changeMessage,
     }
   },

@@ -3,10 +3,8 @@ import App from '~/App'
 import store from '~/stores'
 import router from '~/routers'
 import i18n from '~/languages'
+import virnectComponents from '~/plugins/virnectComponents'
 
 const app = createApp(App)
 
-app.use(store).use(router).use(i18n).mount('#app')
-
-app.config.globalProperties.$store = store
-app.config.globalProperties.$router = router
+app.use(store).use(router).use(i18n).use(virnectComponents).mount('#app')
