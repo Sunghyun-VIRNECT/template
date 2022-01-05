@@ -1,27 +1,7 @@
 <template>
-  <Default />
-  <!-- Remove & use example component! -->
-  <Nav />
-  <RouterView />
+  <router-view />
 </template>
-
-<script>
-import Default from './layouts/Default'
-import { inject } from 'vue'
-import Nav from '~/components/Nav'
-
-export default {
-  name: 'App',
-  components: {
-    Default,
-    Nav,
-  },
-  setup() {
-    const $store = inject('$store')
-
-    return {
-      $store,
-    }
-  },
-}
+<script lang="ts">
+import { Vue } from 'vue-property-decorator'
+export default class App extends Vue {}
 </script>

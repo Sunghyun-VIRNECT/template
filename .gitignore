@@ -1,16 +1,33 @@
 .DS_Store
-node_modules/
-/dist/
-debug.log
+node_modules
+/dist
+
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-/test/unit/coverage/
-selenium-debug.log
-logs
+pnpm-debug.log*
 
 # Editor directories and files
 .idea
 .vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-/coverage
+# for mac
+*.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
