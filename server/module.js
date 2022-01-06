@@ -15,6 +15,8 @@ var ServerModule = (function () {
   let PORT
   //@TODO : update part!!
   async function start(app) {
+    await config.init()
+    
     VIRNECT_ENV = process.env.VIRNECT_ENV || 'production'
     SSL_ENV = config.getAsString('SSL_ENV') || 'public'
     PORT = config.getPort() || 8886
