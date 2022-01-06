@@ -4,6 +4,7 @@ const glob = require('glob')
 const common = require('./webpack.base.conf.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
@@ -55,6 +56,7 @@ module.exports = merge(common, {
         },
       ],
     }),
+    new CleanWebpackPlugin(),
   ],
   optimization: {
     minimize: true,
